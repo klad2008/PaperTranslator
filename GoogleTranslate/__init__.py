@@ -1,0 +1,1 @@
+from GoogleTranslate.GoogleTranslate import translate
