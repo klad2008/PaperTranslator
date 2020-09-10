@@ -19,7 +19,6 @@ def _get_translate_url(from_language, to_language, translate_text):
     url = 'https://translate.google.cn/translate_a/single?'
     for k, v in query_dict.items():
         url = url + k + '=' + v + '&'
-    print(url)
     return url
 
 

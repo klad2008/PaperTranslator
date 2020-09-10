@@ -1,0 +1,17 @@
+A Block Decomposition Algorithm for Sparse Optimization
+	Ganzhao Yuan: Peng Cheng Laboratory
+	Li Shen: Tencent AI LAB
+	Weishi Zheng: Sun Yat-sen University
+	
+
+A causal look at statistical definitions of discrimination
+	Elias Chaibub Neto: Sage Bionetworks
+	
+
+A Data Driven Graph Generative Model for Temporal Interaction Networks
+	Dawei Zhou: University of Illinois at Urbana-Champaign
+	Lecheng Zheng: University of Illinois at Urbana-Champaign
+	Jiawei Han: University of Illinois at Urbana-Champaign
+	Jingrui He: University of Illinois at Urbana-Champaign
+	
+

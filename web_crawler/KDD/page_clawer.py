@@ -14,10 +14,13 @@ class page_clawer:
             print('step: ', step, file = f)
     
     def load_log(self):
-        with open('page_clawer.log', 'r', encoding = 'utf-8') as f:
-            url = f.readline().split('url: ')[1].strip()
-            step = int(f.readline().split('step: ')[1])
-        return url, step
+        try:
+            with open('page_clawer.log', 'r', encoding = 'utf-8') as f:
+                url = f.readline().split('url: ')[1].strip()
+                step = int(f.readline().split('step: ')[1])
+            return url, step
+        except:
+            return None, None
     
     def connect(self, url):
         try:
@@ -30,7 +33,6 @@ class page_clawer:
         return req
 
     def paper_page(self, url):
-        print(url)
         req = self.connect(url)
         container = PyQuery(req.text)('.container')
         output = []
