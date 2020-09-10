@@ -15,10 +15,9 @@ def connection(content):
 
 if __name__ == '__main__':
     file_name = sys.argv[1]
-    with open(file_name, 'r', encoding = 'gbk', errors = 'ignore') as f:
+    with open(file_name, 'r', encoding = 'utf-8', errors = 'ignore') as f:
         content = ' '.join(f.readlines())
     content = connection(content)
     content = translate('en', 'zh-CN', content)
-    print(content)
     with open(file_name, 'w', encoding = 'utf-8') as f:
         print(content, file = f)

@@ -2,16 +2,354 @@ A Block Decomposition Algorithm for Sparse Optimization
 	Ganzhao Yuan: Peng Cheng Laboratory
 	Li Shen: Tencent AI LAB
 	Weishi Zheng: Sun Yat-sen University
-	
+	稀疏优化是机器学习和计算机视觉中的核心问题。但是，该问题本质上是np难题，因此通常难以解决。组合搜索方法可以找到全局最优解，但仅限于小型问题，而协调下降方法虽然有效，但经常会遇到局部极小值的问题。本文考虑了一种新的块分解算法，该算法结合了组合搜索方法的有效性和坐标下降法的效率。具体来说，我们考虑使用随机策略或/和贪婪策略来选择坐标子集作为工作集，然后基于原始目标函数对工作集执行全局组合搜索。我们证明，与amir beck等人的坐标优化方法相比，我们的方法找到了更强的固定点。另外，我们建立算法的收敛速度。我们对稀疏正则化和稀疏约束最小二乘优化问题的实验表明，我们的方法在准确性方面达到了最新水平。例如，我们的方法通常胜过众所周知的贪婪追踪方法。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
 
 A causal look at statistical definitions of discrimination
 	Elias Chaibub Neto: Sage Bionetworks
-	
+	预测奇偶校验和错误率平衡是评估分类器公平性的公认标准。然而，人们意识到这些同样合理的标准会导致矛盾的结果，引起了很多争论/争议，并推动了数学结果的发展，从而确立了无法同时满足预测均等性和错误率平衡的问题。在这里，我们从因果关系的角度研究这些公平标准。通过考虑产生观察数据的数据生成过程以及产生预测的数据生成过程，并假设可信度，我们证明了当基准价格在受保护群体之间不同且没有完美的条件时分离，则标准分类器无法实现精确的预测奇偶性。 （在这里，标准分类器是指以常规方式训练的分类器，没有采用预处理，处理中或后处理公平性技术。）此结果通常成立，而与数据生成过程引起的结果无关。观察数据。此外，我们表明，对于积极的预测值指标而言，完全不同的误用金额与基本费率之间的差异成比例。对于差错率平衡以及密切相关的均等几率和机会均等标准，我们表明，尽管基准率因受保护组而不同，但仍有一些数据生成过程可以满足这些条件，并且我们对这些条件成立的条件。我们使用合成数据以及对compas数据的重新分析来说明我们的结果。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
 
 A Data Driven Graph Generative Model for Temporal Interaction Networks
 	Dawei Zhou: University of Illinois at Urbana-Champaign
 	Lecheng Zheng: University of Illinois at Urbana-Champaign
 	Jiawei Han: University of Illinois at Urbana-Champaign
 	Jingrui He: University of Illinois at Urbana-Champaign
-	
+	由于深度图生成模型在生物学，化学和社会科学等多个领域中对现实图进行建模的优越性，最近引起了广泛的关注。尽管取得了初步的成功，但大多数（如果不是全部）现有作品都是为静态网络设计的。尽管如此，许多现实网络本质上是动态的，并以系统日志的集合（即实体之间带时间戳的交互作用/边缘）的形式呈现，这为我们提出了新的研究方向：我们如何通过直接从系统日志中学习来合成现实的动态网络。 ？此外，我们如何确保生成的图既保留实际数据的结构特征又保留时间特征？为了应对这些挑战，我们提出了一个名为taggen的端到端深度生成框架。特别是，我们从一种新颖的采样策略开始，该策略从时间网络中共同提取结构和时间上下文信息。最重要的是，taggen参数化了双层自我注意机制以及一系列本地操作，以生成时间随机游动。最后，鉴别器逐渐选择在输入数据中似乎合理的生成的时间随机游动，并将其馈送到用于生成时间网络的组装模块。在各种指标上对七个真实世界数据集进行的实验结果表明，（1）taggen优于时间交互网络生成问题中的所有基线；（2）taggen大大提高了异常任务中预测模型的性能检测和链接预测。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+A Framework for Recommending Accurate and Diverse Items Using Bayesian Graph Convolutional Neural Networks
+	Jianing Sun: Huawei Technologies Canada
+	Wei Guo: Huawei Noah's Ark Lab
+	Dengcheng Zhang: Huawei Distributed and Parallel Software Lab
+	Yingxue Zhang: Huawei Technologies Canada
+	Florence Robert-Regol: McGill University
+	Yaochen Hu: Huawei Technologies Canada
+	Huifeng Guo: Huawei Noah's Ark Lab
+	Ruiming Tang: Huawei Noah's Ark Lab
+	Han Yuan: Huawei Distributed and Parallel Software Lab
+	Xiuqiang He: Huawei Noah's Ark Lab
+	Mark Coates: McGill University
+	个性化的推荐系统在在线消费平台中扮演着越来越重要的角色。由于推荐系统中存在多种关系，因此提出了基于图形神经网络（gnn）的方法，以便在对用户的偏好进行建模时更好地表征用户与商品之间的各种关系。以前的基于图的推荐方法将观察到的用户-项目交互图作为用户和项目之间关系的真实描述。但是，尤其是在隐式推荐设置中，所有未观察到的用户项交互通常都假定为负样本。缺少代表用户未来操作的链接。此外，可能存在虚假或误导性的积极互动。为了缓解上述问题，在这项工作中，我们迈出了第一步，介绍了一种使用贝叶斯图卷积神经网络框架对用户项交互图中的不确定性进行建模的原理方法。我们讨论如何在我们的框架下进行推理，并使用贝叶斯概率排名训练损失提供具体的表述。我们在四个基准推荐数据集上证明了我们提出的框架的有效性。所提出的方法优于基于图形的最新推荐模型。此外，我们对一个工业大规模数据集进行了离线评估。它表明，我们提出的方法优于基准，对于冷启动用户而言，潜在收益更为显着。这说明了在实际推荐系统中的潜在实际好处。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+A Geometric Approach to Predicting Bounds of Downstream Model Performance
+	Brian J. Goode: Virginia Tech
+	Debanjan Datta: Virginia Tech
+	本文介绍了将模型应用标准纳入基线分析的动机和方法。我们将专注于详细说明均方误差（mse）和准确性之间的相互关系，因为它们与感知的模型性能有关。 mse是用于预测回归模型性能的常用汇总指标。优点很多。 mse不考虑模型的选择，因为在适当的度量空间上定义了一组可能的结果值。在实践中，有关如何随后使用经过训练的模型的决策是基于相对于未使用输入要素的基线的预测性能-通俗地说是“随机模型”。但是，就mse而言，模型相对于基准的相对性能提升不能保证在下游应用程序，系统或流程中部署时具有相称的提升。本文演示了一种派生方法，该方法可以使多类决策系统的mse性能达到一定水平，并希望达到一定的准确性。通过与适合于评估单个结果性能标准的应用程序相关的相关基线进行比较，可以对模型误差进行鉴定。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+A Non-Iterative Quantile Change Detection Method in Mixture Model with Heavy-Tailed Components
+	Yuantong Li: Purdue University
+	Qi Ma: North Carolina State University
+	Sujit Ghosh: North Carolina State University
+	混合模型的参数估计具有广泛的应用范围，从分类问题到复杂分布的估计。当前有关估计混合物密度参数的大多数文献都是基于迭代期望最大化（em）类型算法，该算法要求使用对潜在标签变量的期望值，或者使用这些潜在标签的条件分布生成样本。贝叶斯规则。而且，当组件的数量未知时，由于众所周知的标签切换问题，该问题在计算上的要求更高[28]。在本文中，我们提出了一种基于变更点方法的健壮且快速的方法，即使在组分繁重的尾部（例如cauchy）上，也可以确定几乎适用于任何位置范围族的混合组分的数量。通过将我们的方法与文献中使用模拟数据和实际案例研究得出的一些流行方法进行比较，我们提供了一些数值插图。所提出的方法显示出比某些竞争方法快500倍，并且在拟合优度测试中估计混合物分布也更准确。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+A Novel Deep Learning Model by Stacking Conditional Restricted Boltzmann Machine and Deep Neural Network
+	Tianyu Kang: University of Massachusetts Boston
+	Ping Chen: University of Massachusetts Boston
+	John Quackenbush: Harvard T.H. Chan School of Public Health
+	Wei Ding: University of Massachusetts Boston
+	现实世界的系统通常会表现出其子单元之间相互作用而产生的复杂动力。在机器学习和数据挖掘中，这些交互通常被表述为系统变量之间的依赖性和相关性。与处理空间相关特征的卷积神经网络和具有时间相关特征的递归神经网络类似，在本文中，我们提出了一种新颖的深度学习模型，通过堆叠条件受限的boltzmann机器和深度神经网络（crbm-dnn）来解决功能交互特征）。具有依存关系的变量被组织成一个二部图，该二部图被进一步转换为以领域知识为条件的受限玻尔兹曼机。我们将此crbm和dnn集成到受一个整体成本函数约束的一个深度学习模型中。 crbm-dnn可以解决有监督和无监督的学习问题。与相同大小的常规神经网络相比，crbm-dnn具有较少的参数，因此需要较少的训练样本。我们使用一些具有挑战性的现实世界数据集，使用大量的有监督学习和无监督学习方法进行了广泛的比较研究，并取得了显着的卓越性能。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Adaptive Graph Encoder for Attributed Graph Embedding
+	Ganqu Cui: Tsinghua University
+	Jie Zhou: Tsinghua University
+	Cheng Yang: Beijing University of Posts and Telecommunications
+	Zhiyuan Liu: Tsinghua University
+	从图拓扑和节点特征中学习向量表示的属性图嵌入是图分析的一项艰巨任务。最近，基于图卷积网络（gcn）的方法在此任务上取得了长足的进步。但是，现有的基于gcn的方法具有三个主要缺点。首先，我们的实验表明图卷积滤波器和权重矩阵的纠缠会损害性能和鲁棒性。其次，我们证明了这些方法中的图卷积滤波器是广义拉普拉斯平滑滤波器的特例，但它们并没有保留最佳的低通特性。最后，现有算法的训练目标通常是恢复邻接矩阵或特征矩阵，这些矩阵并不总是与实际应用相符。为了解决这些问题，我们提出了一种自适应图形编码器（age），这是一种新颖的属性图嵌入框架。 age由两个模块组成：（1）为了更好地减轻节点特征中的高频噪声，age首先应用了精心设计的拉普拉斯平滑滤波器。 （2）age采用了自适应编码器，该编码器迭代地增强了滤波后的特征，以实现更好的节点嵌入。我们使用四个公共基准数据集进行实验，以验证age在节点聚类和链接预测任务上的作用。实验结果表明，age在这些任务上始终优于现有的嵌入方法。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Adversarial Infidelity Learning for Model Interpretation
+	Jian Liang: Cloud and Smart Industries Group, Tencent, China
+	Bing Bai: Cloud and Smart Industries Group, Tencent, China
+	Yuren Cao: Cloud and Smart Industries Group, Tencent, China
+	Kun Bai: Cloud and Smart Industries Group, Tencent, China
+	Fei Wang: Cornell University
+	模型解释对于数据挖掘和知识发现至关重要。它可以帮助理解内在模型的工作机制，并检查模型是否具有不良特性。执行模型解释的一种流行方法是按实例选择特征（ifs），它提供代表数据样本的每个特征的重要性得分，以解释模型如何生成特定输出。在本文中，我们提出了一种与模型无关的有效直接格式（meed）ifs框架，用于模型解释，减轻了对完整性，组合快捷方式，模型可识别性和信息传递的担忧。另外，我们集中在以下设置上：使用选定的特征直接预测给定模型的输出，该输出用作模型解释方法的主要评估指标。除了这些功能之外，我们还将给定模型的输出作为附加输入，以根据更准确的信息学习解释器。为了学习解释器，除了保真之外，我们还提出了对抗性不忠学习（ail）机制，通过筛选相对不重要的特征来促进解释性学习。通过理论和实验分析，我们证明了我们的ail机制可以帮助学习所选特征和目标之间的所需条件分布。此外，我们通过整合有效的解释方法作为适当的先验来扩展我们的框架，以提供一个良好的开端。定量指标和人工评估提供了全面的经验评估结果，以证明我们提出的方法的有效性和优越性。我们的代码可从https://github.com/langlrsw/meed在线获得。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+AdvMind: Inferring Adversary Intent of Black-Box Attacks
+	Ren Pang: Penn State
+	Xinyang Zhang: Penn State
+	Shouling Ji: Zhejiang University
+	Xiapu Luo: Hong Kong Polytechnic University
+	Ting Wang: Penn State
+	即使在黑箱设置下，深度神经网络（dnn）本身也容易受到对手的攻击，在这种情况下，对手仅具有对目标模型的查询访问权限。在实践中，虽然有可能有效地检测到此类攻击（例如，观察大量相似但不相同的查询），但要准确地推断出对手的意图（例如，对手试图进行攻击的对手示例的目标类别）通常是具有挑战性的技术），特别是在攻击的早期阶段，这对于在许多情况下有效地威慑和补救威胁至关重要。在本文中，我们提出了advmind，这是一类新的估计模型，可以以快速可靠的方式推断黑盒对抗攻击的对手意图。具体而言，为了实现强大的检测能力，advmind考虑了对手的适应性，因此她隐瞒目标的尝试将大大增加攻击成本（例如，在查询数量方面）；为了实现及时检测，advmind主动合成合理的查询结果，以从对手那里征求后续查询，从而最大程度地展示了她的意图。通过对基准数据集和最先进的黑盒攻击进行广泛的经验评估，我们证明，advmind在观察少于3个查询批次后，平均检测到对手意图的准确率超过75％，同时增加了自适应攻击的成本超过60％。我们进一步讨论了advmind与其他防御黑箱对抗攻击的防御方法之间可能的协同作用，并指出了一些有希望的研究方向。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Algorithmic Aspects of Temporal Betweenness
+	Sebastian Buß: TU Berlin
+	Hendrik Molter: TU Berlin
+	Rolf Niedermeier: TU Berlin
+	Maciej Rymar: TU Berlin
+	图顶点的居中性度量了在图的其他顶点之间的最短路径上访问该顶点的频率。在分析许多现实世界的图形或网络时，顶点的居中性被用作指示其在网络中相对重要性的指标。近年来，越来越多的现实世界网络被建模为时间图，而不是传统的（静态）图。在时间图中，我们有一组固定的顶点，并且有一组有限的离散时间步长，并且每个边可能仅在某些时间步长处出现。尽管最短路径可以在静态图中轻松定义，但相对于许多不同标准（包括长度，到达时间和总行驶时间）（最短，最先和最快路径），可以将时间路径视为“最佳”。这导致了时间中间性中心性的不同概念，在算法方面提出了新的挑战。我们基于理论和经验层面的最佳时间路径的各种概念，对时间中间性变量进行了系统的研究。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Algorithmic Decision Making with Conditional Fairness
+	Renzhe Xu: Tsinghua University
+	Peng Cui: Tsinghua University
+	Kun Kuang: Zhejiang University
+	Bo Li: Tsinghua University
+	Linjun Zhou: Tsinghua University
+	Zheyan Shen: Tsinghua University
+	Wei Cui: Squirrel AI Learning
+	如今，公平问题已引起决策系统的极大关注。已经提出了各种公平概念来测量算法不公平的程度。实际上，经常存在一定的变量集，我们称之为公平变量，它们是诸如用户选择之类的预先确定的协变量。公平变量的影响与评估决策支持算法的公平性无关。因此，我们通过对公平性变量进行条件化，将条件公平性定义为更合理的公平性指标。考虑到对公平变量的不同先验知识，我们证明了传统的公平表示法，例如人口统计平价和均等赔率，是我们有条件公平表示法的特例。此外，我们提出了一种可推导的条件公平正则化器（dcfr），可以将其集成到任何决策模型中，以跟踪算法决策的精度和公平性之间的权衡。具体来说，在我们的dcfr中提出了一种基于对抗表示的条件独立性损失，以衡量不公平的程度。通过对三个现实世界数据集的广泛实验，我们证明了条件公平表示法和dcfr的优势。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Aligning Superhuman AI with Human Behavior: Chess as a Model System
+	Reid McIlroy-Young: University of Toronto
+	Siddhartha Sen: Microsoft Research
+	Jon Kleinberg: Cornell University
+	Ashton Anderson: University of Toronto
+	随着人工智能变得越来越智能（在某些情况下达到超人的性能），人类学习和与算法协作的潜力越来越大。但是，人工智能系统处理问题的方式通常不同于人们的处理方式，因此可能难以解释且难以学习。弥合人类与人工智能之间的鸿沟的关键一步是对构成人类行为的细粒度动作进行建模，而不是简单地匹配人类的整体表现。我们在具有悠久的人工智能历史的模型系统（国际象棋）中追求这一目标。国际象棋棋手在游戏过程中做出决策时，其综合表现会不断提高。各种技能水平的玩家在线玩的亿万游戏构成了丰富的数据源，这些决策及其确切的上下文都记录在细节中。将现有的国际象棋引擎应用于此数据，包括alphazero的开源实现，我们发现它们不能很好地预测人类的动作。我们开发并推出了maia，这是经过人工下棋训练的alphazero的定制版本，可以预测人类动作的准确性要比现有引擎高得多，并且在以可调整的方式预测特定技能水平的玩家做出的决策时可以达到最大准确性。 。对于预测人类在下一步行动中是否会犯重大错误的双重任务，我们开发了一种深度神经网络，其性能大大优于竞争基准。综上所述，我们的结果表明，通过首先对粒状人类决策进行准确建模，在设计具有人类协作意识的人工智能系统方面具有巨大希望。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+ALO-NMF: Accelerated Locality-Optimized Non-negative Matrix Factorization
+	Gordon Moon: Sandia National Laboratories
+	J. Austin Ellis: Sandia National Laboratories
+	Aravind Sukumaran-Rajam: Washington State University
+	Srinivasan Parthasarathy: The Ohio State University
+	P. Sadayappann: University of Utah
+	非负矩阵分解（nmf）是无监督降维的关键内核，广泛用于包括图形挖掘，推荐系统和自然语言处理在内的各种应用中。由于必须执行重复nmf的应用程序的计算密集型性质，因此已经开发了几种并行实现。但是，现有的并行nmf算法尚未解决数据局部性优化问题，这对高性能至关重要，因为数据移动成本大大超过了当前计算机系统上的算术/逻辑运算成本。在本文中，我们提出了一种基于hals（分层交替最小二乘）方案的并行nmf算法的优化方法，该方法结合了算法转换以增强数据局部性。该算法在多核cpu和gpu上的有效实现得到了开发，展示了一种新的加速局部优化nmf（alo-nmf），与现有状态相比，该技术可将数据移动成本降低2.29倍，并加快4.45倍。最新的并行nmf算法。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+AM-GCN: Adaptive Multi-channel Graph Convolutional Networks
+	Xiao Wang: Beijing University of Posts and Telecommunications
+	Meiqi Zhu: Beijing University of Posts and Telecommunications
+	Deyu Bo: Beijing University of Posts and Telecommunications
+	Peng Cui: Tsinghua University
+	Chuan Shi: Beijing University of Posts and Telecommunications
+	Jian Pei: Simon Fraser University
+	图卷积网络（gcn）在处理图和网络数据上的各种分析任务方面广受欢迎。但是，最近的一些研究引起了人们的关注，即gcn是否可以在具有丰富信息的复杂图中以最佳方式集成节点特征和拓扑结构。在本文中，我们首先提出一个实验研究。令人惊讶的是，我们的实验结果清楚地表明，最新的gcn在融合节点特征和拓扑结构方面的能力与最佳甚至令人满意的目标相去甚远。该弱点可能会严重阻碍gcn在某些分类任务中的功能，因为gcn可能无法自适应地学习拓扑结构和节点特征之间的一些深层相关信息。我们是否可以弥补这一弱点并设计出一种新型的gcn，这些gcn既可以保留最新的gcn的优势，又可以大大增强融合拓扑结构和节点特征的能力？我们解决了这一挑战，并提出了一种用于半监督分类的自适应多通道图卷积网络（am-gcn）。中心思想是，我们从节点特征，拓扑结构及其组合中同时提取特定和通用的嵌入，并使用注意力机制来学习嵌入的自适应重要性权重。我们在基准数据集上进行的广泛实验清楚地表明，am-gcn可以从节点特征和拓扑结构中提取最相关的信息，并以明显的余量提高分类精度。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+An Efficient Neighborhood-based Interaction Model for Recommendation on Heterogeneous Graph
+	Jiarui Jin: Shanghai Jiao Tong University
+	Jiarui Qin: Shanghai Jiao Tong University
+	Yuchen Fang: Shanghai Jiao Tong University
+	Kounianhua Du: Shanghai Jiao Tong University
+	Weinan Zhang: Shanghai Jiao Tong University
+	Yong Yu: Shanghai Jiao Tong University
+	Zheng Zhang: Amazon
+	Alexander Smola: Amazon
+	由于hin能够表征复杂图形并包含丰富的语义，因此近年来涌入了基于异构信息网络（hin）的推荐系统。尽管现有方法已经实现了性能上的改进，但是尽管可行，但是它们仍然面临以下问题。一方面，大多数现有的基于hin的方法依靠显式的路径可达性来利用用户和项目之间基于路径的语义相关性，例如基于元路径的相似性。这些方法难以使用和集成，因为路径连接稀疏或嘈杂，并且长度通常不同。另一方面，其他基于图的方法旨在通过在预测之前将节点及其邻域信息压缩到单个嵌入中来学习有效的异构网络表示。这种建模中的弱耦合方式忽略了节点之间的丰富交互，这引入了早期的汇总问题。在本文中，我们提出了一种基于端到端的基于邻居的推荐交互模型（nirec），以解决上述问题。具体来说，我们首先分析hin中学习交互的重要性，然后提出一种新颖的公式，以通过其元路径引导的邻域捕获每对节点之间的交互模式。然后，为了探究元路径之间的复杂相互作用并解决大规模网络上的学习复杂性，我们以卷积的方式制定相互作用，并通过快速傅立叶变换进行有效学习。在四种不同类型的异构图上进行的广泛实验证明，与最新技术相比，nirec的性能有所提高。据我们所知，这是在基于hin的建议中提供有效的基于邻域的交互模型的第一项工作。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+An Embarrassingly Simple Approach for Trojan Attack in Deep Neural Networks
+	Ruixiang Tang: Texas A&M University
+	Mengnan Du: Texas A&M University
+	Ninghao Liu: Texas A&M University
+	Fan Yang: Texas A&M University
+	Xia Hu: Texas A&M University
+	随着深度神经网络（dnn）在高风险应用中的广泛使用，dnn模型的安全性问题受到了广泛关注。在本文中，我们调查了一个特定的安全问题，称为特洛伊木马攻击，该问题旨在依靠恶意黑客插入的隐藏触发模式来攻击已部署的dnn系统。我们提出了一种无训练的攻击方法，该方法不同于以前的工作，在该方法中，通过对有毒数据集进行重新训练模型来注入木马行为。具体来说，我们不会在原始模型中更改参数，而是将一个小的木马模块（trojannet）插入目标模型。当输入带有特殊触发器标记时，带有恶意木马的受感染模型可能会将输入错误分类为目标标签。拟议的trojannet具有几个不错的属性，包括（1）通过微小的触发模式激活并对其他信号保持沉默;（2）与模型无关，可以注入大多数dnn中，从而极大地扩展了其攻击场景;（3）与传统的特洛伊木马攻击方法相比，免培训机制节省了大量的培训工作。实验结果表明，trojannet可以将特洛伊木马同时注入所有标签（全标签特洛伊木马攻击），并且在不影响原始任务模型准确性的情况下，可以达到100％的攻击成功率。实验分析进一步证明，最先进的特洛伊木马检测算法无法检测到trojannet攻击。该代码位于https://github.com/trx14/trojannet。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+ASGN: An Active Semi-supervised Graph Neural Network for Molecular Property Prediction
+	Zhongkai Hao: University of Science and Technology of China
+	Chengqiang Lu: University of Science and Technology of China
+	Zhenya Huang: University of Science and Technology of China
+	Hao Wang: University of Science and Technology of China
+	Zheyuan Hu: University of Science and Technology of China
+	Qi Liu: University of Science and Technology of China
+	Enhong Chen: University of Science and Technology of China
+	Cheekong Lee: Tencent America
+	分子特性预测（例如能量）是化学和生物学中的基本问题。不幸的是，许多监督学习方法通​​常会遭受化学空间中标记分子稀少的问题，在这种情况下，通常通过密度泛函理论（dft）计算获得这种特性标记，而这种计算方法计算起来非常昂贵。一种有效的解决方案是以半监督的方式掺入未标记的分子。然而，学习大量分子的半监督表示具有挑战性，包括分子本质和结构的联合表示问题，表示与属性倾向之间的冲突。在这里，我们通过结合标记和未标记的分子，提出了一种称为主动半监督图神经网络（asgn）的新颖框架。具体而言，asgn采用师生框架。在教师模型中，我们提出了一种新颖的半监督学习方法来学习一般表示，该方法可以共同利用分子结构和分子分布中的信息。然后在学生模型中，我们针对属性预测任务来处理学习损失冲突。最后，我们从分子多样性的角度提出了一种新颖的主动学习策略，可以在整个框架学习过程中选择有益的数据。我们对几个公共数据集进行了广泛的实验。实验结果表明，我们的asgn框架具有出色的性能。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Attackability Characterization of Adversarial Evasion Attack on Discrete Data
+	Yutong Wang: King Abdullah University of Science and Technology
+	Yufei Han: NortonLifelock Research Group
+	Hongyan Bao: King Abdullah University of Science and Technology
+	Yun Shen: NortonLifelock Research Group
+	Fenglong Ma: Penn State University
+	Jin Li: Guangzhou Univeristy
+	Xiangliang Zhang: King Abdullah University of Science and Technology
+	对离散数据的回避攻击是一个具有挑战性的研究课题，同时也是一个有趣的研究课题。从本质上讲，这是一个np难题的组合优化问题。因此，表征条件以确保逃避攻击任务的可解决性成为了解对抗威胁的关键。我们的研究受到弱次模量理论的启发。我们通过将可攻击性度量与目标分类器的规律性联系起来，来表征目标分类器在规避攻击中对离散数据的可攻击性。基于我们的可攻击性分析，我们提出了一种计算效率高的正交匹配追踪制导攻击方法，用于对离散数据的规避攻击。它提供了可证明的计算效率和攻击性能。在真实数据集上的大量实验结果验证了所提出的可攻击性条件以及所提出的攻击方法的有效性。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Attention and Memory-Augmented Networks for Dual-View Sequential Learning
+	Yong He: Alibaba
+	Cheng Wang: Alibaba
+	Nan Li: Alibaba
+	Zhenyu Zeng: Alibaba
+	近年来，由于深度学习及其在时间序列预测，自然语言处理和语音识别中的应用的进步，顺序学习引起了人们的极大兴趣。与传统的机器学习模型相比，递归神经网络（rnn）在单视图和同步多视图顺序学习中取得了卓越的性能。但是，该方法在异步多视图顺序学习中仍未得到很好的探索，并且多个序列的不对齐特性对学习视图间的交互性提出了巨大的挑战。我们通过集成注意力和内存来开发amanet（注意力和记忆增强网络）体系结构，以解决一般的异步多视图学习问题，并且本文重点研究双视图序列中的实验。自我注意和相互关注分别用于捕获视图内交互和视图间交互。历史记录注意存储器旨在存储特定对象的历史信息，用作本地知识存储。动态外部存储器用于存储每个视图的全局知识。我们在以下三个任务中评估模型：来自患者病历的药物推荐，来自医院病历的诊断相关组（drg）分类以及通过公司的税收行为检测发票欺诈。结果表明，我们的模型在所有任务中均优于所有基线和其他最新模型。此外，我们模型的消融研究表明，注意间机制在模型中起着关键作用，并且可以通过有效地捕获异步视图之间的视图间交互作用来提高预测能力。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Attentional Multi-graph Convolutional Network for Regional Economy Prediction with Open Migration Data
+	Fengli Xu: Tsinghua University
+	Yong Li: Tsinghua University
+	Shusheng Xu: Tsinghua University
+	我们使用从美国国税局（irs）记录中收集的公开移民数据来研究预测美国县域经济的问题。为了捕获它们之间的复杂关联，我们设计了一个新颖的注意力多图卷积网络（amcn），该模型将迁移行为建模为具有不同类型边缘的多图，表示从不同年份和不同时间的异构源收集的迁移流人口统计资料。 amcn首先通过在诱导子图上应用定制的聚合器函数，然后将聚合的特征与高阶注意力聚合器函数融合，从迁移多图中提取高质量特征。此外，我们使用一种重要的邻居发现算法解决了数据稀疏性问题，该算法可以自动补充经验数据中缺少的重要邻居。实验结果表明，相对于经典回归模型，相对于最新的深度学习基准，amcn模型的相对均方差降低了43.8％，而相对于最新的深度学习基准则降低了12.7％，从而大大优于所有基线。深入的模型分析表明，我们提出的amcn模型揭示了区域经济与移民数据之间的深刻关联。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+AutoGrow: Automatic Layer Growing in Deep Convolutional Networks
+	Wei Wen: Duke University
+	Feng Yan: University of Nevada - Reno
+	Yiran Chen: Duke University
+	Hai Li: Duke University
+	深度是深度神经网络（dnn）的关键组成部分，但是，深度设计是一种启发式方法，需要很多人的努力。我们建议使用autogrow来自动进行dnn中的深度发现：从浅种子结构开始，如果增长提高了准确性，则autogrow会增长新的层；否则，停止增长，从而发现深度。我们提出了强大的增长和停止策略，以推广到不同的网络体系结构和数据集。我们的实验表明，通过将相同的策略应用于不同的网络体系结构，autogrow可以始终在mnist，fashionmnist，svhn，cifar10，cifar100和imagenet的各种数据集上发现接近最佳深度。例如，在精度计算折衷方面，autogrow在\ resnets中发现了比人工专家更好的深度组合。 ourautogrow是高效的。它会在训练单个dnn的相似时间内发现深度。我们的代码位于\ urlhttps：//github.com/wenwei202/autogrow。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+AutoML Pipeline Selection: Efficiently Navigating the Combinatorial Space
+	Chengrun Yang: Cornell University
+	Jicong Fan: Cornell University
+	Ziyang Wu: Cornell University
+	Madeleine Udell: Cornell University
+	在数据集上寻求良好的监督学习模型的数据科学家可以做出许多选择：他们必须预处理数据，选择特征，可能减小维数，选择估计算法以及为每个管道组件选择超参数。随着新的管道组件的出现，选择的数量激增了！在这项工作中，我们设计了一个新的automl系统tensoroboe来应对这一挑战：一个设计监督学习管道的自动化系统。 tensoroboe使用低秩张量分解作为有效管道搜索的替代模型。我们还开发了一种新的贪婪实验设计协议，以有效地收集有关新数据集的信息。大型现实世界分类问题的实验证明了我们方法的有效性。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+AutoShuffleNet: Learning Permutation Matrices via an Exact Lipschitz Continuous Penalty in Deep Convolutional Neural Networks
+	Jiancheng Lyu: Qualcomm
+	Shuai Zhang: Qualcomm
+	Yingyong Qi: Qualcomm
+	Jack Xin: University of California, Irvine
+	shufflenet是最新的轻量级卷积神经网络体系结构。它的基本操作包括分组，通道卷积和通道改组。但是，信道改组是根据经验手动设计的。从数学上讲，混洗是乘以置换矩阵的乘积。在本文中，我们建议通过学习网络训练中的置换矩阵来自动进行信道改组。我们引入精确的lipschitz连续非凸罚分，以便可以将其合并到随机梯度下降中以高精度近似排列。精确的排列是在训练结束时通过简单舍入获得的，并用于推断。由此产生的网络称为autoshufflenet，它在保留shufflenet推理成本的同时，提高了cifar-10，cifar-100和imagenet数据的分类精度。此外，我们通过实验发现，置换矩阵到随机矩阵的标准凸松弛会导致较差的性能。我们从理论上证明当惩罚函数为零（非常小）时，恢复置换矩阵的准确性（误差范围）。我们提供了通过图匹配和两层神经网络模型进行置换优化的示例，其中损失函数以封闭分析形式进行计算。在示例中，凸松弛未能捕获排列，而我们的惩罚成功了。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+AutoST: Efficient Neural Architecture Search for Spatio-Temporal Prediction
+	Ting Li: JD Intelligent Cities Business Unit
+	Junbo Zhang: JD Intelligent Cities Business Unit
+	Kainan Bao: south west jiaotong university
+	Yuxuan Liang: School of Computing, National University of Singapore
+	Yexin Li: Yexin Li Hong Kong University of Science and Technology
+	Yu Zheng: JD Intelligent Cities Business Unit
+	时空（st）预测（例如人群流量预测）在智慧城市的各种应用中都非常重要，这些应用包括城市规划，智能交通和公共安全。最近，已经提出了许多深度神经网络模型来进行准确的预测。但是，手动设计神经网络需要大量的专家工作和st域知识。如何为城市中的各种时空预测任务自动构建通用神经网络？在本文中，我们研究了用于时空预测的神经体系结构搜索（nas），并提出了一种有效的时空神经体系结构搜索方法，称为autost。据我们所知，在nas在各种应用中取得成功之前，搜索空间是至关重要的人才，而当前的nas模型则集中于优化固定搜索空间中的搜索策略。因此，我们设计了一种针对st域的新颖搜索空间，其中包括两类组件：（i）每层的可选卷积操作，以自动提取多范围的时空依赖关系； （ii）层之间可学习的跳过连接，以动态融合低级和高级st功能。我们对四个实词的时空预测任务（包括出租车流量和人群流量）进行了广泛的实验，表明学习到的网络体系结构可以显着提高代表性st神经网络模型的性能。此外，我们提出的高效nas方法的搜索速度比最新nas方法快8到10倍，证明了autost的效率和有效性。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Average Sensitivity of Spectral Clustering
+	Pan Peng: Department of Computer Science, University of Sheffield, Sheffield, U.K.
+	Yuichi Yoshida: National Institute of Informatics
+	谱聚类是在图形中查找聚类的最流行的聚类方法之一，在数据挖掘中发现了许多应用。但是，由于测量错误，出于隐私原因而保留或数据转换中的任意性，这些应用程序中的输入图可能会有许多缺失的边缘。为了基于频谱聚类做出可靠而有效的决策，我们使用平均灵敏度的概念评估输入图中图谱聚类相对于边缘扰动的稳定性，该灵敏度是我们随机前后输出集群的对称差异的预期大小。去除边缘。我们首先证明频谱聚类的平均灵敏度与$łambda_2/łambda_3^ 2 $成正比，其中$łambda_i$是（规范化）拉普拉斯算子的第i个最小特征值。我们还证明了k向谱聚类的相似界限，它将图分为k个聚类。然后，我们通过对合成网络和真实网络进行实验，从经验上确定我们的理论界限。我们的结果表明，当输入图中存在聚类结构时，光谱聚类对于边缘扰动是稳定的。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+BLOB: A Probabilistic Model for Recommendation that Combines Organic and Bandit Signals
+	Otmane Sakhi: Criteo
+	Stephen Bonner: Durham University
+	David Rohde: Criteo
+	Flavian Vasile: Criteo
+	推荐器系统的常见任务是根据用户浏览历史中的项目建立用户兴趣的档案，然后再从同一目录中向用户推荐项目。用户的行为包括两个部分：未经干预即可查看的项目顺序（有机部分）以及推荐给他们的项目顺序及其结果（强盗部分）。在本文中，我们提出贝叶斯潜在有机强盗模型（blob），这是一种将“有机”和“强盗”信号相结合的概率方法，以提高对推荐质量的估计。强盗信号很有价值，因为它可以直接给出推荐性能的反馈，但是信号质量却很不平衡，因为它高度集中于推荐系统过去版本认为最佳的推荐。相反，有机信号通常很强，涵盖了大多数项目，但并不总是与推荐任务相关。为了利用有机信号有效地学习贝叶斯模型中的土匪信号，我们确定了三种基本距离类型，即行动历史，行动历史和历史历史距离。我们使用变分自动编码器和局部重新参数化技巧，实现了完整模型的可缩放近似值。我们通过广泛的模拟研究表明，我们的方法在有机和强盗方面均优于或匹配基于有机物的最新推荐算法以及基于强盗的方法（基于价值和基于策略）的价值丰富的环境。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Block Model Guided Unsupervised Feature Selection
+	Zilong Bai: University of California, Davis
+	Hoa Nguyen: University of California, Davis
+	Ian Davidson: University of California, Davis
+	特征选择是数据挖掘的核心领域，它是对链接数据进行图形驱动的无监督特征选择的最新创新。在此设置中，我们有一个数据集y，该数据集y由n个实例（每个实例具有m个特征）和相应的n个节点图（其邻接矩阵为a）组成，其边缘指示两个实例相似。在属性网络上进行无监督特征选择的现有方法，要么是通过求解f（例如f（yi，yj）〜ai，j）来直接重新生成链接，要么是在a中找到社区结构，然后使用y中的特征来预测这些社区。然而，就探索更复杂的指导而言，图驱动的无监督特征选择仍然是一个未被研究的领域。在这里，我们采用新颖的方法，首先在图形上构建一个块模型，然后使用该块模型进行特征选择。也就是说，我们发现了fmft〜a，然后找到了特征s的子集，该子集诱导了另一个图来同时保留f和m。我们将这种方法称为块模型引导无监督特征选择（bmgufs）。实验结果表明，在寻找高质量的聚类特征时，我们的方法在一些现实世界的公共数据集上优于最新技术。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+BOND: Bert-Assisted Open-Domain Named Entity Recognition with Distant Supervision
+	Chen Liang: Georgia Institute of Technology
+	Yue Yu: Georgia Institute of Technology
+	Haoming Jiang: Georgia Institute of Technology
+	Siawpeng Er: Georgia Institute of Technology
+	Ruijia Wang: Georgia Institute of Technology
+	Tuo Zhao: Georgia Institute of Technology
+	Chao Zhang: Georgia Institute of Technology
+	我们研究了在远程监督下的开放域命名实体识别（ner）问题。远程监管虽然不需要大量的手动注释，但通过外部知识库会产生高度不完整和嘈杂的远程标签。为了解决这一挑战，我们提出了一个新的计算框架bond，它利用了预训练语言模型（例如bert和roberta）的强大功能来提高ner模型的预测性能。具体来说，我们提出了一个两阶段的训练算法：在第一阶段，我们使用遥远的标签使预训练的语言模型适应ner任务，从而可以显着提高召回率和准确性。在第二阶段，我们丢弃远处的标签，并提出一种自训练方法来进一步提高模型性能。在5个基准数据集上进行的全面实验证明，bond优于现有的远程监督ner方法。代码和远距离标记的数据已在https://github.com/cliang1453/bond中发布。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+CAST: A Correlation-based Adaptive Spectral Clustering Algorithm on Multi-scale Data
+	Xiang Li: The University of Hong Kong
+	Ben Kao: The University of Hong Kong
+	Caihua Shan: The University of Hong Kong
+	Dawei Yin: JD.com
+	Martin Ester: Simon Fraser University
+	我们研究了将频谱聚类应用于聚类多尺度数据的问题，多尺度数据是指聚类具有各种大小和密度的数据。传统的光谱聚类技术通过处理反映物体接近度的相似度矩阵来发现聚类。对于多尺度数据，基于距离的相似性无效，因为稀疏聚类的对象可能相距较远，而密集聚类的对象必须足够接近。继[16]之后，我们通过将对象的“可达性相似性”概念与给定的基于距离的相似性相集成，以得出对象的系数矩阵，从而解决了多尺度数据上的光谱聚类问题。我们提出了一种算法cast，它应用跟踪套索来规范化系数矩阵。我们证明所得的系数矩阵具有“分组效应”，并且表现出“稀疏性”。我们表明这两个特征暗示非常有效的光谱聚类。我们在广泛的数据集上评估了cast和其他10种聚类方法。各种措施。实验结果表明，cast具有出色的性能，并且在多尺度数据的测试案例中具有很高的鲁棒性。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Catalysis Clustering With GAN By Incorporating Domain Knowledge
+	Olga Andreeva: University of Massachusetts Boston
+	Wei Li: Wuhan University
+	Wei Ding: University of Massachusetts Boston
+	Marieke Kuijjer: Centre for Molecular Medicine Norway, University of Oslo
+	John Quackenbush: Dana-Farber Cancer Institute
+	Ping Chen: University of Massachusetts Boston
+	当数据稀疏和高维时，聚类是一种重要的无监督学习方法，面临严峻挑战。生成的群集通常使用一般度量进行评估，这对于实际应用和领域可能没有意义或无用。使用距离度量，一种聚类算法搜索数据空间，将封闭项分组为一个聚类，然后将较远的样本分配给不同的聚类。在许多实际应用中，维的数量很多，并且数据空间变得非常稀疏。选择合适的距离度量非常困难，并且在涉及分类数据时变得更加困难。而且，现有的距离度量标准大多是通用的，基于这些度量标准创建的群集对于特定于域的应用程序不一定有意义。解决这些挑战的一种选择是将域定义的规则和准则集成到群集过程中。在这项工作中，我们提出了一种基于gan的方法，称为catalysis clustering，以将领域知识整合到群集过程中。借助gan，我们可以生成催化剂，这些催化剂是从原始数据分布中提取的特殊合成点，并经过验证以提高按领域特定指标进行测量时的聚类质量。然后，我们使用催化剂和实际数据进行聚类分析。去除催化剂点后产生最终簇。在两个具有挑战性的现实数据集上进行的实验清楚地表明，我们的方法是有效的，并且可以生成对现实应用有意义且有用的集群。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Certifiable Robustness of Graph Convolutional Networks under Structure Perturbations
+	Daniel Zügner: Technical University of Munich
+	Stephan Günnemann: Technical University of Munich
+	最近的工作表明，消息传递神经网络（mpnn）可能受到节点属性和图结构的对抗攻击而蒙骗。由于mpnn目前正在实际应用中迅速采用，因此提高其可靠性和鲁棒性至关重要。虽然在节点属性扰动下对mpnn进行鲁棒性认证已经取得了进展，但是没有现有方法可以处理结构扰动。这些干扰特别具有挑战性，因为它们会更改消息传递方案本身。在这项工作中，我们弥合了这一差距，并提出了第一种方法来验证图卷积网络（gcn）在图结构扰动下的鲁棒性。我们展示了如何将这个问题表达为一个联合约束的双线性程序-一个具有挑战性但经过充分研究的问题类别-并提出一种新颖的分支定界算法来获得全局最优值的下界。与标准线性松弛相比，这些下限更加严格，并且可以证明多达两倍的节点。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+CICLAD: A Fast and Memory-efficient Closed Itemset Miner for Streams
+	Tomas Martin: UQAM
+	Petko Valtchev: UQAM
+	Guy Francoeur: UQAM
+	从数据流中挖掘关联规则是一项具有挑战性的任务，因为（通常）可用资源有限，而结果却很大。频繁关闭的项目集（fci）可以实现高效的第一步，但是当前的fci流矿工在资源消耗方面并不是最优的，例如他们以额外成本存储了大量额外的项目集。为了寻求更好的存储效率权衡，我们设计了基于交叉口的滑动窗口fci采矿机ciclad。利用对fci演变的深入了解，它结合了最少的存储量和快速的访问权限。实验结果表明，与竞争对手的方法相比，ciclad的记忆烙印要低得多，并且在全球范围内的性能都更好。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Combinatorial Black-Box Optimization with Expert Advice
+	Hamid Dadkhahi: IBM Research
+	Karthikeyan Shanmugam: IBM Research
+	Jesus Rios: IBM Research
+	Payel Das: IBM Research
+	Samuel Hoffman: IBM Research
+	Troy David Loeffler: ANL
+	Subramanian Sankaranarayanan: UIC
+	我们考虑了布尔超立方体上的黑盒函数优化问题。尽管有大量关于连续域上的黑盒函数优化的文献，但是直到最近才对用于组合域上的优化的学习模型给予了很多关注。然而，即使对于中等数量的变量，最近设计的算法的计算复杂性也是令人望而却步的。使用现有算法绘制一个样本比对许多感兴趣的黑盒函数进行函数评估要昂贵得多。为了解决这个问题，我们提出了一种基于多重线性多项式和指数权重更新的高效计算模型学习算法。在提出的算法中，我们在针对当前多项式表示的模拟退火与使用多项式专家的建议更新权重之间进行交替。在无约束和总约束布尔优化中对各种数据集进行的数值实验表明，该算法具有竞争优势，同时与文献中的最新算法相比，其计算时间缩短了几个数量级。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Competitive Analysis for Points of Interest
+	Shuangli Li: University of Science and Technology of China
+	Jingbo Zhou: Baidu Inc.
+	Hao Liu: Business Intelligence Lab, Baidu Research
+	Xinjiang Lu: Baidu
+	Tong Xu: University of Science and Technology of China
+	Hui Xiong: the State University of New Jersey
+	兴趣点（poi）的竞争关系是指两个poi在市区内为来自第三方的商业机会而竞争的程度。现有的竞争分析研究通常集中在从文本数据中挖掘实体（例如公司或产品）的竞争关系。但是，很少有研究关注poi的竞争分析。确实，关于poi的用户行为数据（例如poi评论和人类移动性数据）的可用性不断提高，为理解poi之间的竞争关系提供了新的范例。为此，本文研究了如何预测poi竞争关系。沿着这条线，第一个挑战是如何将异构用户行为数据与poi的空间特征集成在一起。作为解决方案，我们首先根据poi评论和地图搜索数据构建异构poi信息网络（hpin）。然后，我们开发了一种基于图神经网络的深度学习框架deepp，用于基于hpin的poi竞争关系预测。具体来说，deepr包含两个组件：空间自适应图神经网络（sa-gnn）和poi成对知识提取学习（pke）模型。 sa-gnn是一种新颖的gnn架构，通过专门设计的面向空间的聚合层和空间相关的关注传播机制，将poi的空间信息和位置分布结合在一起。此外，设计了pke来将hpin中的poi成对知识提炼为关系图卷积和交叉注意，可用于关系预测为凝聚向量。最后，在两个实际数据集上的大量实验证明了我们方法的有效性。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+COMPOSE: Cross-Modal Pseudo-Siamese Network for Patient Trial Matching
+	Junyi Gao: IQVIA
+	Cao Xiao: IQVIA
+	Lucas Glass: IQVIA
+	Jimeng Sun: University of Illinois Urbana-Champaign
+	临床试验在药物开发中起着重要作用，但经常遭受昂贵，不准确和患者招募不足的困扰。大量的电子健康记录（ehr）数据和试验资格标准（ec）的可用性为数据驱动的患者招募带来了新机会。一项名为“患者-试验匹配”的关键任务是，根据结构化ehr和非结构化ec文本（包括和排除标准）寻找合格的患者进行临床试验。如何将复杂的ec文本与纵向患者ehr进行匹配？如何在患者和试验之间建立多对多关系？如何明确处理包含标准和排除标准之间的差异？在本文中，我们提出了cross-modal pseudo-siamese网络（compose），以应对患者-试验匹配的这些挑战。网络的一条路径使用卷积高速公路网络对ec进行编码。另一条路径使用多粒度存储网络处理ehr，该网络基于医学本体将结构化的患者记录编码为多个级别。使用ec嵌入作为查询，compose执行注意力记录对齐，从而实现动态的患者-试验匹配。 compose还引入了复合损失项，以最大程度地提高患者记录与纳入标准之间的相似度，同时使与排除标准之间的相似度最小。实验结果表明，composes在患者-标准匹配上可以达到98.0％的auc，在患者-试验匹配上可以达到83.7％的准确性，这比现实世界中的患者-试验匹配任务的最佳基准提高了24.3％。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Compositional Embeddings Using Complementary Partitions for Memory-Efficient Recommendation Systems
+	Hao-Jun Shi: Northwestern University
+	Dheevatsa Mudigere: Facebook
+	Maxim Naumov: Facebook
+	Jiyan Yang: Facebook
+	基于现代深度学习的推荐系统利用了数百到数千个不同的分类功能，每个分类都有数以百万计的不同类别，从点击到发布。为了尊重分类数据中的自然多样性，嵌入将每个类别映射到嵌入式空间内的唯一密集表示。由于每个分类功能都可能具有多达数千万种不同的可能类别，因此在训练和推理过程中，嵌入表构成了主要的存储瓶颈。我们提出了一种新颖的方法，通过利用类别集的互补分区来为每个类别生成唯一的嵌入向量，而无需明确定义，从而以端对端的方式减小嵌入大小。通过基于每个互补分区存储多个较小的嵌入表并组合来自每个表的嵌入，我们以较小的成本为每个类别定义了唯一的嵌入。可以将这种方法解释为使用特定的固定密码本来确保每个类别表示的唯一性。我们的实验结果表明，相对于散列技巧，我们的方法在减少模型损失和准确性的同时减小参数数量的同时，有效减少了嵌入表的大小。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Connecting the Dots: Multivariate Time Series Forecasting with Graph Neural Networks
+	Zonghan Wu: University of Technology Sydney
+	Shirui Pan: Monash University
+	Guodong Long: University of Technology Sydney
+	Jing Jiang: University of Technology Sydney
+	Xiaojun Chang: Monash University
+	Chengqi Zhang: University of Technology Sydney
+	对多元时间序列进行建模一直以来一直是吸引来自经济，金融和交通等各个领域的研究人员的主题。多元时间序列预测背后的一个基本假设是，其变量相互依赖，但是仔细观察，可以说现有方法无法完全利用变量对之间的潜在空间依赖性。同时，近年来，图神经网络（gnn）在处理关系依赖方面表现出了很高的能力。 gnn需要良好定义的图结构来进行信息传播，这意味着它们无法直接应用于事先不知道相关性的多元时间序列。在本文中，我们提出了专门为多元时间序列数据设计的通用图神经网络框架。我们的方法通过图形学习模块自动提取变量之间的单向关系，可以轻松地将诸如变量属性之类的外部知识集成到其中。进一步提出了一种新颖的混合跳跃传播层和一个扩张的起始层来捕获时间序列内的空间和时间依赖性。在端到端框架中共同学习图学习，图卷积和时间卷积模块。实验结果表明，我们提出的模型在4个基准数据集中的3个方面优于最新的基线方法，并且在提供额外结构信息的两个交通数据集上与其他方法相比，具有与众不同的性能。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Context-to-Session Matching: Utilizing Whole Session for Response Selection in Information-Seeking Dialogue Systems
+	Zhenxin Fu: Peking University
+	Shaobo Cui: Alibaba Group
+	Mingyue Shang: Peking University
+	Feng Ji: DAMO Academy, Alibaba Group
+	Dongyan Zhao: Peking University
+	Haiqing Chen: Alibaba Group
+	Rui Yan: Peking University
+	我们研究了基于检索的多回合信息寻求对话系统，该系统在许多场景中得到了广泛使用。之前的大多数作品都是根据查询上下文与候选响应之间的匹配程度来选择响应的。尽管已经取得了很大的进步，但是现有作品忽略了响应的上下文，这可以为选择最合适的响应提供丰富的信息。查询的上下文和某些响应的上下文越相似，它们指示相同问题的可能性就越大，因此，此响应回答查询的可能性就越大。在本文中，我们将响应及其上下文视为整个会话，并探索将查询的上下文与会话进行匹配的任务。更具体地说，我们建议在查询的上下文和响应的上下文之间进行匹配，并将上下文到上下文的匹配与上下文到响应的匹配进行集成。实验结果证明，我们提出的上下文到会话方法明显优于强基准。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+CoRel: Seed-Guided Topical Taxonomy Construction by Concept Learning and Relation Transferring
+	Jiaxin Huang: University of Illinois at Urbana-Champaign
+	Yiqing Xie: The Hong Kong University of Science and Technology
+	Yu Meng: University of Illinois at Urbana-Champaign
+	Yunyi Zhang: University of Illinois at Urbana-Champaign
+	Jiawei Han: University of Illinois at Urbana-Champaign
+	分类法不仅是知识表示的基本形式，而且对于大量的知识丰富的应用程序（例如问题回答和web搜索）也至关重要。大多数现有的分类法构建方法都提取上位词-简称实体对，以组织“通用”分类法。但是，这些通用分类法无法满足用户在某些领域和关系中的特定兴趣。此外，实例分类法的性质将每个节点视为一个单词，其语义覆盖范围很低，人们无法完全理解。在本文中，我们提出了一种种子指导的主题分类法的构建方法，该方法以概念名称描述的语料库和种子分类法为输入，并根据用户的兴趣构建更完整的分类法，其中每个节点均由一个簇表示连贯的术语我们的框架corel有两个模块可以实现此目标。关系转移模块可沿多条路径学习并转移用户感兴趣的关系，以扩展种子分类法结构的宽度和深度。概念学习模块通过联合嵌入分类法和文本来丰富每个概念节点的语义。在现实世界的数据集上进行的综合实验表明，corel可以生成高质量的局部分类法，并且明显优于所有基线。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Correlation Networks for Extreme Multi-label Text Classification
+	Guangxu Xun: University of Virginia
+	Kishlay Jha: University of Virginia
+	Jianhui Sun: University of Virginia
+	Aidong Zhang: University of Virginia
+	本文开发了用于极端多标签文本分类（xmtc）任务的correlation networks（cornet）架构，其目的是使用极大标签集中最相关的标签子集来标记输入文本序列。 xmtc可以在许多实际应用程序中找到，例如文档标记和产品注释。最近，深度学习模型在xmtc任务中取得了出色的表现。但是，这些深层xmtc模型忽略了不同标签之间有用的关联信息。 cornet通过在深度模型的预测层添加一个额外的cornet模块来解决此限制，该模块能够学习标签相关性，利用相关性知识增强原始标签预测并输出增强的标签预测。我们展示了cornet可以轻松地与深度xmtc模型集成，并且可以有效地概括不同数据集。我们进一步证明，cornet可以在性能和收敛速度方面对现有深层xmtc模型进行重大改进。这些模型和数据集可在以下网址获得：https：//github.com/xunguangxu/cornet。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Counterfactual Evaluation of Slate Recommendations with Sequential Reward Interactions
+	James McInerney: Netflix
+	Brian Brost: Spotify
+	Praveen Chandar: Spotify
+	Rishabh Mehrotra: Spotify
+	Ben Carterette: Spotify
+	音乐流，视频流，新闻推荐和电子商务服务的用户通常以顺序的方式参与内容。因此，提供和评估良好的推荐顺序是这些服务的中心问题。先前基于重加权的反事实评估方法要么承受较大的方差，要么对奖励做出强烈的独立性假设。我们提出了一种新的反事实估计量，它允许以渐近无偏的方式在方差较小的奖励中进行顺序交互。我们的方法使用有关板岩因果关系的图形假设，以一种近似于目标策略下预期奖励总和的方式重新加权采伐策略中的奖励。在模拟和实时推荐系统上进行的大量实验表明，对于连续跟踪推荐问题，我们的方法在偏差和数据效率方面优于现有方法。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Curb-GAN: Conditional Urban Traffic Estimation through Spatio-Temporal Generative Adversarial Networks
+	Yingxue Zhang: Worcester Polytechnic Institute
+	Yanhua Li: Worcester Polytechnic Institute
+	Xun Zhou: University of Iowa
+	Xiangnan Kong: Worcester Polytechnic Institute
+	Jun Luo: Lenovo Group Limited
+	给定一份城市发展计划和对道路网的历史交通观察，“有条件的城市交通估算”问题旨在在部署该计划之前估算最终的交通状况。这个问题对于城市发展和交通管理非常重要，但是却非常具有挑战性，因为该计划将极大地改变当地的出行需求，而新的出行需求模式在历史数据中可能是前所未有的。为了应对这些挑战，我们提出了一种新颖的有条件城市交通生成对抗网络（curb-gan），该网络可根据不同的（空前的）出行需求在连续的时间段内提供交通量估算，从而使城市规划人员能够在部署之前准确评估城市规划。拟议的curb-gan通过一些新颖的思想采用并改进了条件gan结构：（1）将各种旅行需求作为“条件”并生成相应的交通量估计；（2）集成动态卷积层以捕获局部空间自动-沿底层道路网络的相关性，（3）采用自注意力机制来捕获跨不同时隙的交通的时间依赖性。在两个现实世界的时空数据集上进行的大量实验表明，在各种条件下，我们的遏制gan都优于主要的基线方法，在估计精度上可以产生更有意义的估计。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+CurvaNet: Geometric Deep Learning based on Multi-scale Directional Curvature for 3D Shape Analysis
+	Wenchong He: University of Alabama
+	Zhe Jiang: Univ of Alabama
+	Chengming Zhang: Univ. of Alabama
+	Arpan Man Sainju: univ. of Alabama
+	在过去的十年中，深度学习研究在计算机视觉和自然语言处理方面取得了巨大的成功。当前广泛成功的深度学习模型主要基于具有规则网格（例如图像和视频数据）的欧几里得平面上的卷积和池化操作，因此无法直接应用于非欧几里得表面。几何深度学习旨在通过将深度学习模型从2d欧几里得平面推广到3d几何表面来填补空白。该问题在人机交互，生物化学和机械工程中具有重要的应用，但由于缺乏规则的网格框架以及在非欧氏流形上学习几何特征的困难，因此具有独特的挑战性。现有作品集中于将深度学习模型从2d图像推广到图形（例如图形神经网络）或3d网格表面，但没有从差分几何学的角度全面学习几何特征。相比之下，本文提出了一种新颖的几何深度学习模型curvanet，该模型将微分几何与图神经网络集成在一起。关键思想是通过方向曲率滤波器学习方向敏感的3d形状特征。我们设计了一个类似于u-net的体系结构，并基于网格池和解池操作对路径进行了下采样和上采样。对真实数据集的评估表明，所提出的模型在分类准确度方面优于几种基准方法。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Data Compression as a Comprehensive Framework for Graph Drawing and Representation Learning
+	Claudia Plant: Research Group Data Mining, University of Vienna, ds:UniVie
+	Sonja Biedermann: University of Vienna
+	Christian Böhm: Ludwig Maximilian University of Munich
+	将图形嵌入特征空间是一种了解其结构的有前途的方法。嵌入2d或3d空间可实现可视化；高维向量空间（通常> 100d）中的图像表示可以应用数据挖掘技术。对于成功的知识发现，至关重要的是，嵌入顶点之间的距离必须真实反映图的结构。我们的基本思想是通过根据嵌入中相应顶点之间的欧式距离预测边缘的存在来压缩邻接矩阵，并将获得的压缩率用作嵌入的质量度量。我们称这种质量测度为预测熵（pe）。 pe使用s型函数来定义随欧几里得距离单调递减的概率。我们使用这种s形概率通过熵编码来压缩图的邻接矩阵。尽管pe可用于评估任何图形绘制或表示学习方法的结果，但我们在我们的新方法gempe（通过最小化预测熵的图形嵌入）中特别将其用作目标函数。我们在实验中证明，gempe在视觉结果质量，聚类和在发现坐标上的节点标记准确性方面明显优于比较方法。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
+
+Deep Exogenous and Endogenous Influence Combination for Social Chatter Intensity Prediction
+	Subhabrata Dutta: Jadavpur University, India
+	Sarah Masud: IIIT-Delhi, India
+	Soumen Chakrabarti: IIT Bombay, India
+	Tanmoy Chakraborty: IIIT-Delhi, India
+	在社交媒体上对用户参与动态进行建模在市场趋势分析，用户角色检测和政治话语挖掘中具有引人注目的应用。大多数现有方法在很大程度上取决于对基础用户网络的了解。但是，在缺乏可靠的社交网络（新闻门户，博客，buzzfeed）或仅部分揭示用户之间的联系（reddit，stackoverflow）的平台上发生了大量讨论。许多方法都需要在相当长的一段时间内观察讨论，然后才能做出有用的预测。在实时流方案中，观察会产生成本。最后，大多数模型无法捕获外部事件（例如在外部发布的新闻报道）和网络内影响（例如reddit的后续讨论）之间的复杂交互来确定参与度。为了解决上述三个限制，我们提出了一个新颖的框架chatternet，据我们所知，它是第一个可以建模和预测用户参与度而无需考虑底层用户网络的框架。给定带有时间戳记的新闻报道和讨论流，任务是观察直到某个时间范围的短时间流，然后预测chat不休：在视野之后的特定时间段内的讨论量。 chatternet使用新颖的随时间变化的递归网络体系结构处理新闻和讨论中的文本，该体系结构既捕获新闻和讨论中的时间属性，又捕获新闻对讨论的影响。我们报告了使用reddit的为期两个月的讨论语料库以及来自common crawl的在线新闻文章的同期语料库进行的广泛实验。 chatternet显示出超越最新的参与度预测模型的重大改进。控制43个不同子分类的观察和预测窗口的详细研究得出了更多有用的见解。当信息可用时，我们将更新网站。如果您有需要立即关注的问题，请随时与我们联系。谢谢！
 
