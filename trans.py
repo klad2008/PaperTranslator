@@ -1,13 +1,14 @@
+import re
 import sys
 from GoogleTranslate import translate
 
 
 def connection(content):
-    content = ''.join(content.split('\n'))
-    content = ''.join(content.split('\x02'))
+    content = ''.join(re.split('[\n\x02]', content))
     content = content.replace('. ', '.\n')
     content = content.replace('  ', ' ')
     content = content.replace('\n ', '\n')
+    content = content.replace('et al.\n', 'et al.')
     content = content + '\n'
     return content
 

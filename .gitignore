@@ -1,3 +1,13 @@
+# Pycharm
+.idea/
+
+# input file
+input.txt
+
+# web crawler
+/web_crawler/*
+!/web_crawler/KDD/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -124,8 +134,3 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Pycharm
-.idea/
-
-# input file
-input.txt
