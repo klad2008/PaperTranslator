@@ -7,6 +7,10 @@ input.txt
 # web crawler
 /web_crawler/*
 !/web_crawler/KDD/
+!/web_crawler/AAAI/
+!/web_crawler/ICDM/
+!/web_crawler/IJCAI/
+!/web_crawler/NeurIPS/
 !/web_crawler/ds2020/
 result.txt
 
