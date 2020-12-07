@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timedelta, timezone
 
 import numpy
 import pandas
@@ -6,12 +7,14 @@ import requests
 
 from web_crawler.ds2020.user_id import user_id
 
-oj_ip = "http://10.192.11.200"
+oj_ip = "http://10.177.31.216"
 root_id = "root"
 root_pw = "fudan-0j!"
-contest_id = 17
+contest_id = 25
 problems_total = 3
-problems_start = 2005
+problems_start = 2028
+ddl_stamp = datetime(2020, 12, 9, 13 - 8, 30)
+
 contest_problems_list = [chr(x) for x in range(ord('A'), ord('A') + problems_total)]
 repair_problems_list = [str(x + problems_start) for x in range(problems_total)]
 full_problems_list = contest_problems_list + repair_problems_list
@@ -73,8 +76,17 @@ for username in user_id:
             headers = headers)
         infolist = json.loads(r_info.text)['data']
         infolist = infolist['results']
-        if len(infolist) == 0:
-            break
+        flag = False
+        for info in infolist:
+            submit_stamp = datetime.strptime(info['create_time'], "%Y-%m-%dT%H:%M:%S.%fZ")
+            if submit_stamp >= ddl_stamp:
+                print(info)
+                pass
+            else:
+                flag = True
+                break
+        if not flag:
+            continue
         contest_result.at[username, repair_problems_list[idx]] = 1
 
 
